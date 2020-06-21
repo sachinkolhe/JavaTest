@@ -8,13 +8,18 @@ public class Test1 {
 
 	public static void main(String[] args) {
 
+		//dummy arraylist having employee name and age
 		List<Employee> list = Arrays.asList(new Employee("Sachin", 29), new Employee("Vaibhav", 25),
 				new Employee("Srishti", 24), new Employee("Nitya", 2), new Employee("Komal", 23),
 				new Employee("Pratik", 27), new Employee("Chirag", 30), new Employee("Nikhil", 35),
 				new Employee("Pranita", 32), new Employee("Ram", 28));
 
+		//to filter list of employee whose age is greater than 26
+		//sorted function accepts Comparator which is also a functional interfaces
 		List<Employee> list2 = list.stream().filter(emp -> emp.age > 26)
 				.sorted((emp1, emp2) -> emp1.firstName.compareTo(emp2.firstName)).collect(Collectors.toList());
+		
+		//to show the output 
 		list2.stream().forEach(System.out::println);
 	}
 

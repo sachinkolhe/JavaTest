@@ -12,9 +12,9 @@ public class Test3 {
 	 */
 	public static void main(String[] args) {
 
-		//int[] pages = new int[] { 5, 0, 1, 3, 2, 4, 1, 0, 5 };
+		int[] pages = new int[] { 5, 0, 1, 3, 2, 4, 1, 0, 5 }; //expected output 8
 		//number of pages available
-		int[] pages = new int[] {0, 2, 1, 6, 4, 0, 1, 0, 3, 1, 2, 1 };
+		//int[] pages = new int[] {0, 2, 1, 6, 4, 0, 1, 0, 3, 1, 2, 1 }; //expected output 9
 		//pageCount
 		int pageCount = 4;
 		//to calculate the pageFualt
@@ -37,7 +37,7 @@ public class Test3 {
 			}
 		}
 		
-		System.out.println(pageFault);
+		System.out.println("Page Fault : " + pageFault);
 	}
 
 }
